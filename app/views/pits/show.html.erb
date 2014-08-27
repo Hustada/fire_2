@@ -46,11 +46,15 @@
         
 <div class="well">
     
-    <div class = "pit-image"><%= image_tag @pit.image_url %></div>
+    
+    <% if @pit.video_url? %>
     <iframe width="560" height="345" src=<%= @pit.video_url %> frameborder="0" allowfullscreen></iframe>
+    <% else %>
+    <div class = "pit-image"><%= image_tag @pit.image_url %></div>
     <h3 class="pit-title"><%= @pit.topic %></h3>
     <p><%= @pit.summary %></p>
     <p>by <%= @pit.author %></p>
+    <% end %>
     <br>
     <br>
     <div class = "like-argument">
