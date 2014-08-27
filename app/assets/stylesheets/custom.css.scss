@@ -1,0 +1,401 @@
+@import "bootstrap";
+
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* universal */
+html {
+  overflow-y: scroll;
+}
+
+.container {
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+div {
+  display: block;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 93px;
+  color: white;
+  font-family: Helvetica;
+}
+
+
+
+.hero-unit {
+padding: 60px;
+margin-bottom: 30px;
+font-size: 18px;
+font-weight: 200;
+line-height: 30px;
+color: inherit;
+background-color: #eeeeee;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+/* About */
+
+
+.container.about {
+  margin-top: 100px;
+}
+
+/* Header */
+
+
+
+.btn-lg {
+  color: white;
+  background-color: transparent;
+  margin-top: 20px;
+
+}
+
+.col-lg-6 {
+width: 50%;
+margin-top: 60px;
+color: white;
+}
+
+#home-header {
+background: #333333;
+/*background-repeat: no-repeat;
+background-size: cover;*/
+width: 100%;
+height: 650px;
+display: block;
+}
+
+.header-description h2 {
+  font-weight: 100;
+  font-family: inherit;
+  font-size: 93px;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0px 12px rgba(36, 36, 36, 0.55);
+  padding: 0px 0 4px 0;
+}
+
+#logo {
+  float: left;
+  margin-top: 20px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+  
+
+
+.navbar-inner ul li {
+ display: inline-block;
+ padding: 10px 15px 10px;
+}
+
+.header-btn {
+color: white;
+margin: 0px auto;
+text-transform: uppercase;
+width: 20%;
+font-weight: 300;
+font-size: 24px;
+padding: 20px 35px;
+border: 2px solid rgb(219, 82, 47);
+background: rgb(219, 82, 47);
+display: block;
+-webkit-border-radius: 9px;
+border-radius: 9px;
+text-align: center;
+}
+
+
+.header-btn:hover {
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  
+}
+
+/* logged in user buttons home */
+
+.btn-default-start {
+  text-align: center;
+  background-color: transparent;
+  display: block;
+  width: 10%;
+  color: #db522f;
+  margin: 0px auto;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bolder;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  padding: 10px 15px;
+  border: 1px solid;
+  border-color: #cccccc;
+}
+
+
+.btn-default-start:hover {
+  background-color: white;
+  text-decoration: none;
+}
+
+.btn-default-join {
+  text-align: center;
+  background-color: transparent;
+  display: block;
+  width: 10%;
+  color: #db522f;
+  margin: 0px auto;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  padding: 10px 15px;
+  border: 1px solid;
+  border-color: #cccccc;
+}
+
+.btn-default-join:hover {
+  background-color: white;
+  text-decoration: none;
+}
+
+
+
+.header-description {
+  margin: 100px 0 80px;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/* site header */
+
+
+.nav li a {
+  color: #db522f;
+}
+
+/* home-footer */
+
+
+.row.home-footer {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  height: 200px;
+  background: #333333;
+  position: relative;
+}
+
+
+.col-md-4 {
+  width: 33.3%;
+  margin-right: -15px;
+  margin-left: 15px;
+}
+
+.col-md-4 {
+  color: white;
+}
+
+  /* Sign Up Form */
+
+  ul.sign-up {
+    list-style-type: none;
+
+  }
+
+  ul.sign-up li {
+    margin-bottom: 20px;
+  }
+
+.form-inputs.sign-in {
+  margin-left: 20px;
+}
+
+/* New Pit Form */
+
+.container.new-pit {
+  height: 100%;
+  margin-top: 150px;
+}
+
+p.youtube-instruction {
+  font-size: 12px;
+}
+
+/* Pit Show Page */
+
+
+.container.pit-show {
+  margin-top: 100px;
+}
+
+h3.pit-title {
+  color: black;
+}
+
+.pit-user-list {
+  color: #777777;
+  list-style-type: none;
+}
+
+.pit-info-list {
+  color: #777777;
+  list-style-type: none;
+}
+
+.pit-creator-list {
+  color: #777777;
+  list-style-type: none;
+}
+
+p.like-summary {
+  font-size: 12px;
+}
+
+p.like-pit {
+  font-size: 12px;
+}
+
+p.dislike-pit {
+  font-size: 12px;
+}
+
+.pit-rep {
+  display: block;
+  float: right;
+  text-align: right;
+}
+
+.like-argument {
+  display: inline-block;
+}
+
+.pit-image {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* Pit List Page */
+
+.container.list-pits {
+  margin-top: 100px;
+}
+
+.well.pit-well {
+  border-radius: 10px;
+}
+
+/* User Profile Page */
+
+.container.profile {
+  margin-top: 100px;
+}
+
+/* User Sign Up */
+
+h3.user-sign-up {
+  color: black;
+  text-align: left;
+}
+
+.container.user-sign-up {
+  margin-top: 100px;
+}
+
+/* Comment likes and Dislikes */
+
+p.like-comment {
+  font-size: 12px;
+  text-align: right;
+}
+
+p.dislike-comment {
+  font-size: 12px;
+  text-align: right;
+}
+
+p.like-response {
+  font-size: 12px;
+}
+
+.response {
+  display: inline-block;
+  float: left;
+}
+
+.response-convince {
+  text-align: right;
+}
+
+
+
+
+
+

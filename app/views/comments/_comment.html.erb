@@ -1,0 +1,33 @@
+  <div class = "well">
+    <p>
+    
+    <%= comment.body %>
+    <p>posted by: <%= comment.user.name %></p>
+    <div class = "response">
+       <p class = "like-response">Was this response persuading to you?</p>
+       <%= link_to "Yes", pit_comment_like_path(@pit, comment), method: :put %>
+       <%= link_to "No", pit_comment_dislike_path(@pit, comment), method: :put %>
+    </div>
+
+    <div class = "response-convince">
+      <p class = "dislike-comment">
+        <%= comment.get_dislikes.size %> users found this response unpersuasive
+      </p>
+       <p class = "like-comment">
+        <%= comment.get_likes.size %> users found this response persuasive</p>
+      </p>
+    </div>    
+
+  <p>
+    <%if comment.user == current_user %>
+
+     <%= link_to 'Destroy Comment', [@pit, comment],
+                 method: :delete,
+                 data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+    <% end %>             
+  </p>
+  </div>
+
+
+
+

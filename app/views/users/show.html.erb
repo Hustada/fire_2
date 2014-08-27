@@ -1,0 +1,24 @@
+<div class = "container profile"> 
+    <div class = "row-fluid">
+        <div class = "col-md-12">
+            <div class = "well">
+               <h3><%= @user.first_name %> <%= @user.last_name %></h3>
+                   <h6><%= image_tag avatar_url(@user) %></h6>
+                   <h6>Email: <%= @user.email %></h6>
+                   <h6>Location: <%= @user.city %>, <%= @user.state %></h6>
+                   <h6>Pits Started (<%= current_user.pits.count %>)</h6>
+                   <br>
+                  <div class = "well">
+                   <h4>About Me</h4>
+                   <p><%= @user.about %></p>
+                  </div>
+                  <a><%= link_to "Start a new pit", new_pit_path %></a>
+                   <br>
+                  <a><%= link_to "Join a created pit", pits_path %></a>
+                  <br>
+                  <a><%= link_to "Edit profile", edit_user_registration_path %></a>
+            </div>
+        </div>
+    </div>
+</div>
+    

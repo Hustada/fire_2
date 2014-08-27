@@ -1,0 +1,24 @@
+<div class = "container list-pits"> 
+  <%= link_to "Add New Pit", new_pit_path, class: "btn btn-default" %>
+  <br>
+  <br>
+  <% @pit.each do |pit| %>
+
+ <div class = "row">
+
+   <div class = "container">
+    <div class = "well pit-well"> 
+       <h3 id="pit-title"><%= link_to pit.topic, pit_path(pit) %></h3>
+       <p>by <%= link_to pit.author, '#' %></p>
+          <br>
+            <p><%= pit.summary %></p>
+            <p>Replies (<%= pit.comments.count %>)</p>
+          <br>
+            <p>Pit Created by: <%= link_to pit.user.name, current_user %> on <%= pit.created_at %></p>
+            <%= link_to "Join Pit", '#', class: "btn btn-primary" %>
+      </div>
+    </div>
+      <% end %>
+     
+  </div>
+ </div>
