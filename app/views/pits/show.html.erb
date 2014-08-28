@@ -52,10 +52,13 @@
     <iframe width="560" height="345" src=<%= @pit.video_url %> frameborder="0" allowfullscreen></iframe>
     <p><%= @pit.summary %></p>
     <p>by <%= @pit.author %></p>
-    
-    <% else %>
-    <h3 class="pit-title"><%= @pit.topic %></h3><h3 class="pit-title"><%= @pit.topic %></h3>
+    <% elsif %>
+    <h3 class="pit-title"><%= @pit.topic %></h3>
     <div class = "pit-image"><%= image_tag @pit.image_url %></div>
+    <p><%= @pit.summary %></p>
+    <p>by <%= @pit.author %></p>
+    <% else %>
+    <h3 class="pit-title"><%= @pit.topic %></h3>
     <p><%= @pit.summary %></p>
     <p>by <%= @pit.author %></p>
     <% end %>
