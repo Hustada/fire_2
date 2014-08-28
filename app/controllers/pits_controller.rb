@@ -1,4 +1,6 @@
 class PitsController < ApplicationController
+  before_action :current_user, only: [:create, :destroy]
+  before_action :correct_user,   only: :destroy
 
 def new
   @pit = Pit.new
@@ -40,6 +42,12 @@ def update
      end
 end
 
+def destroy
+  @pit = Pit.find(params[:id])
+  @pit.destroy
+  redirect_to pits_path
+end
+
 def upvote
   @pit = Pit.find(params[:pit_id])
   @pit.upvote_from current_user
@@ -54,6 +62,11 @@ end
 
 
 private
+
+def correct_user
+    @pit = current_user.pits.find_by_id(params[:id])
+    redirect_to root_path if @pit.nil?
+  end
 
 def pit_params
     params.require(:pit).permit(:topic, :summary, :image, :video_url, :author, :user_id)

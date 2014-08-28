@@ -16,6 +16,9 @@
           <br>
             <p>Pit Created by: <%= link_to pit.user.name, current_user %> on <%= pit.created_at %></p>
             <%= link_to "Join Pit", '#', class: "btn btn-primary" %>
+            <%= link_to 'Delete Pit', [pit],
+                 method: :delete,
+                 data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
       </div>
     </div>
       <% end %>
