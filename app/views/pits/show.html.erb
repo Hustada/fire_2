@@ -47,31 +47,35 @@
 <div class="well">
     
     
-    <% if @pit.video_url? %>
+        <% if @pit.video_url? %>
     <h3 class="pit-title"><%= @pit.topic %></h3>
-    <iframe width="560" height="345" src=<%= @pit.video_url %> frameborder="0" allowfullscreen></iframe>
-    <p><%= @pit.summary %></p>
-    <p>by <%= @pit.author %></p>
-    <% elsif %>
+    <div class="embed-responsive embed-responsive-16by9">
+       <iframe class="embed-responsive-item" src=<%= @pit.video_url %> allowfullscreen></iframe>
+       </div>
+      <p><%= @pit.summary %></p>
+      <p>by <%= @pit.author %></p>
+        <% elsif %>
     <h3 class="pit-title"><%= @pit.topic %></h3>
     <div class = "pit-image"><%= image_tag @pit.image_url %></div>
-    <p><%= @pit.summary %></p>
-    <p>by <%= @pit.author %></p>
-    <% else %>
+      <p><%= @pit.summary %></p>
+      <p>by <%= @pit.author %></p>
+        <% else %>
     <h3 class="pit-title"><%= @pit.topic %></h3>
-    <p><%= @pit.summary %></p>
-    <p>by <%= @pit.author %></p>
-    <% end %>
+      <p><%= @pit.summary %></p>
+      <p>by <%= @pit.author %></p>
+        <% end %>
+
+
     <br>
     <br>
     <div class = "like-argument">
-    <p class = "like-summary">Was this argument convincing to you?</p>
-    <%= link_to "Yes", pit_like_path(@pit), method: :put, class: "btn btn-default" %>
-    <%= link_to "No", pit_dislike_path(@pit), method: :put, class: "btn btn-default" %>
+      <p class = "like-summary">Was this argument convincing to you?</p>
+        <%= link_to "Yes", pit_like_path(@pit), method: :put, class: "btn btn-default" %>
+        <%= link_to "No", pit_dislike_path(@pit), method: :put, class: "btn btn-default" %>
     </div>
     <div class = "pit-rep">
-    <p class = "like-pit"><%= @pit.get_likes.size %> users found this argument convincing</p>
-    <p class = "dislike-pit"><%= @pit.get_dislikes.size %> users found this argument unconvincing</p>
+      <p class = "like-pit"><%= @pit.get_likes.size %> users found this argument convincing</p>
+      <p class = "dislike-pit"><%= @pit.get_dislikes.size %> users found this argument unconvincing</p>
     </div>
     <br>
     <br>

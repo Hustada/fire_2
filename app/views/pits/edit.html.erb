@@ -1,0 +1,37 @@
+<div class = "container">
+
+
+
+  <%= form_for @pit, :html => {:multipart => true} do |f| %>
+
+
+
+  <legend>Pit Edit</legend>
+
+
+  <%= f.input :topic, required: true, autofocus: true %>
+
+
+   <%= f.input :author, class: "col-sm-2 control-label" %>  
+
+  <%= f.input :summary, autocomplete: "off"%>
+
+  
+  <%= f.input :image, class: "col-sm-2 control-label" %>
+
+
+  <%= f.input :video_url, class: "col-sm-2 control-label" %>
+
+ 
+
+
+  <%= f.input :password, class: "col-sm-2 control-label" %>
+
+
+  <%= f.input :password_confirmation, class: "col-sm-2 control-label" %>
+
+
+   <%= f.submit %>
+ </div>
+ <% end %>
+ 
