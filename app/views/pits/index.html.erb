@@ -14,8 +14,9 @@
             <p><%= pit.summary %></p>
             <p>Replies (<%= pit.comments.count %>)</p>
           <br>
-          
-            <p>Pit Created by: <%= link_to pit.user.name, current_user %> on <%= pit.created_at %></p>
+           
+            <p>Pit Created by: <%= link_to pit.user.name, pit.user %> on <%= pit.created_at %></p>
+           
             <%= link_to "View Pit", pit_path(pit), class: "btn btn-primary" %>
             <%= link_to 'Delete Pit', [pit],
                  method: :delete,

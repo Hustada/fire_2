@@ -12,6 +12,9 @@ $grayMediumLight: #eaeaea;
 }
 
 /* universal */
+
+
+
 html {
   overflow-y: scroll;
 }
@@ -42,6 +45,19 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
+
+.btn-default {
+  color: orange;
+}
+
+.btn-default:hover {
+  color: #777777;
+}
+
+
+
+
+
 
 /* typography */
 
