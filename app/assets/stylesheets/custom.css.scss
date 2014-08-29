@@ -300,9 +300,20 @@ h3.pit-title {
   color: black;
 }
 
+
+.panel-heading.pit-members {
+  color: white;
+  background-color: black;
+}
+
 .list-group.pit-user-list {
   color: #777777;
   list-style-type: none;
+}
+
+.panel-heading.pit-info {
+  background-color: black;
+  color: white;
 }
 
 .list-group.pit-info-list {

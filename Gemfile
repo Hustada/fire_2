@@ -18,6 +18,7 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'acts_as_votable'
 gem 'carrierwave'
+gem 'cancancan', '~> 1.9'
 
 
 group :development do

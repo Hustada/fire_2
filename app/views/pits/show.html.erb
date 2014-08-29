@@ -11,13 +11,16 @@
    </tr>
    <br>
    <br>
+
       <ul class = "pit-creator-list">
         <li>Email: <%= @pit.user.email %></li>
         <li>Pits Started: <%= @pit.user.pits.count %> </li>
         <li>Positive votes for (<%= @pit.get_likes.size.to_i %>)</li>
         <li>Negative votes for (<%= @pit.get_dislikes.size.to_i %>)</li>
       </ul>
-   
+      <%= link_to 'Delete Pit',        pit_path(@pit),
+                    method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-primary" %>
+  
 
 
   </div>
@@ -25,7 +28,7 @@
         </div>
         <div class="col-md-4 pit-info">
           <div class="panel panel-default">
-              <div class = "panel-heading">
+              <div class = "panel-heading pit-info">
                 <h3 class = "panel-title">Pit Info</h3>
             </div>
             <div class = "panel-body">
@@ -97,7 +100,7 @@
     <div class="col-md-4">
       <div class="panel panel-default">
   <!-- Default panel contents -->
-  <div class="panel-heading">
+  <div class="panel-heading pit-members">
     <h3 class="panel-title">Pit Members</h3>
   </div>
   <!-- List group -->
