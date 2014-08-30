@@ -4,22 +4,24 @@
 
    <div class="col-md-8 pit-starter-info">
      <div class="well"> 
-     
-   <tr>
+  <tr>
       <td><%= image_tag avatar_url(@pit.user) %></td>
       <td><strong><%= @pit.user.name %></strong></td>
    </tr>
    <br>
    <br>
-
-      <ul class = "pit-creator-list">
+     <ul class = "pit-creator-list">
         <li>Email: <%= @pit.user.email %></li>
         <li>Pits Started: <%= @pit.user.pits.count %> </li>
         <li>Positive votes for (<%= @pit.get_likes.size.to_i %>)</li>
         <li>Negative votes for (<%= @pit.get_dislikes.size.to_i %>)</li>
       </ul>
+    
+      <% if can? :destroy, @pit %>
       <%= link_to 'Delete Pit',        pit_path(@pit),
                     method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-primary" %>
+                    <% end %>
+                                                                      
   
 
 

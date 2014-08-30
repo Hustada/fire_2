@@ -20,7 +20,7 @@
             <%= link_to "View Pit", pit_path(pit), class: "btn btn-primary" %>
             <%= link_to 'Delete Pit', [pit],
                  method: :delete,
-                 data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+                 data: { confirm: 'Are you sure?' } if can? :destroy, @pit, class: "btn btn-primary" %>
                 
                  
             

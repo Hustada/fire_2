@@ -46,13 +46,6 @@ textarea {
   margin-bottom: 10px;
 }
 
-.btn-default {
-  color: orange;
-}
-
-.btn-default:hover {
-  color: #777777;
-}
 
 
 
@@ -259,14 +252,6 @@ text-align: center;
 /* home-footer */
 
 
-.row.home-footer {
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  height: 200px;
-  background: #333333;
-  position: relative;
-}
 
 
 .col-md-4 {
@@ -276,7 +261,7 @@ text-align: center;
 }
 
 .col-md-4 {
-  color: white;
+  color: #777777;
 }
 
   /* Sign Up Form */
@@ -338,9 +323,11 @@ h3.pit-title {
 }
 
 .pit-creator-list {
+  display: inline-block;
   color: #777777;
   list-style-type: none;
-}
+  float: none;
+ }
 
 p.like-summary {
   font-size: 12px;
@@ -368,6 +355,8 @@ p.dislike-pit {
   display: inline-block;
   margin-bottom: 20px;
 }
+
+
 
 /* Pit List Page */
 
