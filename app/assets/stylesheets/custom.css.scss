@@ -250,7 +250,10 @@ text-align: center;
 }
 
 /* home-footer */
-
+ .footer-button {
+  background-color: #777777;
+  border: #777777;
+ }
 
 
 
@@ -304,7 +307,7 @@ h3.pit-title {
 
 .panel-heading.pit-members {
   color: white;
-  background-color: black;
+  background-color: #333333;
 }
 
 .list-group.pit-user-list {
@@ -313,7 +316,7 @@ h3.pit-title {
 }
 
 .panel-heading.pit-info {
-  background-color: black;
+  background-color: #333333;
   color: white;
 }
 
@@ -408,6 +411,47 @@ p.like-response {
 
 .response-convince {
   text-align: right;
+}
+
+
+/* Carousel */
+
+/* Layout */
+
+/*body {
+  padding-top: 50px;
+}
+
+.container {
+  max-width: 1000px;
+}*/
+
+/* Jumbotron */
+
+.jumbotron {
+  text-align: center;
+}
+
+/* GlyphIcons */
+
+.glyphicon {
+  font-size: 3em;
+  color: #3a87ad;
+  display: block;
+  margin: auto;
+  display: block;
+}
+
+.carousel-indicators {
+  bottom: 0;
+}
+
+.carousel-indicators.active {
+  background-color: #222;
+}
+
+.carousel-indicators.li {
+  background-color: #222;
 }
 
 

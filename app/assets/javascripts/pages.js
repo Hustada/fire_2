@@ -6,3 +6,9 @@
 
 // When the DOM is ready, run this function
 
+<script language="JavaScript" type="text/javascript">
+     $(document).ready(function(){
+     $('.carousel').carousel({
+      interval: 2000
+    })
+  }); 
