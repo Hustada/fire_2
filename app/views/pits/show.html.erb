@@ -16,7 +16,6 @@
         <li>Positive votes for (<%= @pit.get_likes.size.to_i %>)</li>
         <li>Negative votes for (<%= @pit.get_dislikes.size.to_i %>)</li>
       </ul>
-    
       <% if can? :destroy, @pit %>
       <%= link_to 'Delete Pit',        pit_path(@pit),
                     method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-primary" %>

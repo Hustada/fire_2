@@ -1,6 +1,6 @@
 class PitsController < ApplicationController
   before_action :current_user, only: [:create, :destroy]
-  before_action :correct_user,   only: :destroy
+   before_action :correct_user,   only: :destroy
 
 def new
   @pit = Pit.new
@@ -9,21 +9,20 @@ end
 def index
   @pit = Pit.all
   @user = User.find_by(params[:id])
-  @pits = Pit.paginate(:page => params[:page]).order('created_at ASC').group_by { |pit| pit.created_at.strftime("%B %Y") }
+  @pits = Pit.order('created_at ASC')
 end
 
 
 
 
 def create
-  @user = current_user
-  @pit = current_user.pits.create(pit_params)
-    if @pit.save
-      flash[:success] = "Pit Created!"
-      redirect_to @pit
-    else
-      render 'new'
-    end
+    @pit = current_user.pits.create(pit_params)
+    @pits = Pit.order('created_at ASC')
+      respond_to do |format|
+        format.html { redirect_to @pit}
+        format.js  {}
+
+  end
 end
     
 
@@ -45,8 +44,12 @@ end
 def destroy
   @pit = Pit.find(params[:id])
   @pit.destroy
-  redirect_to pits_path
+  respond_to do |format|
+        format.html { redirect_to @pit }
+        format.js 
+  end
 end
+
 
 def upvote
   @pit = Pit.find(params[:pit_id])

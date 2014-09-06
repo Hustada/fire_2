@@ -9,12 +9,12 @@ class Ability
        else
          can :read, :all
          can :create, Pit
-         can :delete, Pit do |pit|
+         can :destroy, Pit do |pit|
             pit.try(:user) == user
          can :update, Pit do |pit|
             pit.try(:user) == user
          can :create, Comment 
-         can :delete, Comment do |comment|
+         can :destroy, Comment do |comment|
             pit.try(:user) == user
          can :update, Comment do |comment|
             pit.try(:user) == user

@@ -1,0 +1,54 @@
+<div class="container new-pit", id = "pit_form">
+
+<%= render 'devise/shared/error_messages', obj: @pit %>
+
+<%= form_for @pit, remote: true, :html => {:multipart => true} do |f| %>
+
+   <div class = "form-horizontal">
+
+      <div class="form-group">
+                   <%= f.label :topic, class: "col-sm-2 control-label" %>
+             <div class="col-sm-6">
+                   <%= f.text_field :topic, class: "form-control", autofocus: true %>
+             </div>  
+      </div>
+
+      <div class="form-group">
+                   <%= f.label :author, class: "col-sm-2 control-label" %>
+             <div class="col-sm-6">
+                   <%= f.text_field :author, class: "form-control", :placeholder => "Enter name of book author, lecturer, or presenter" %>
+             </div>  
+      </div>
+      
+           <div class="form-group">
+                   <%= f.label :summary, class: "col-sm-2 control-label" %>
+             <div class="col-sm-6">
+                   <%= f.text_area :summary, class: "form-control", :placeholder => "Present an argument for or against the material presented and state why you think it is accurate or not" %>
+             </div>  
+           </div>
+       
+           <div class="form-group">
+                   <%= f.label :image, class: "col-sm-2 control-label" %>
+             <div class="col-sm-6">
+                   <%= f.file_field :image, class: "form-control" %>
+             </div>  
+           </div>
+           <div class="form-group">
+                   <%= f.label :video, class: "col-sm-2 control-label" %>
+             <div class="col-sm-6">
+                   <%= f.text_field :video_url, class: "form-control", :placeholder => "example: //www.youtube.com/embed/hBHYdK9xtYs (video is optional)" %>
+                   <p class = "youtube-instruction">Must use the shared -> embed option</p>
+             </div>  
+           </div>
+          <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-6">
+                      <%= f.submit "Start Pit", class: "btn btn-primary" %>
+               </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+
+<% end %>

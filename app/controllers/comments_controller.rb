@@ -1,8 +1,10 @@
 class CommentsController < ApplicationController
+  
 
 
  def create
   @pit= Pit.find(params[:pit_id])
+  @pits = Pit.order(created_at 'ASC')
   @comment = @pit.comments.build(comments_params)
   @comment.user = current_user
   @comment.save

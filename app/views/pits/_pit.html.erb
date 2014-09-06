@@ -1,12 +1,4 @@
-
-<div class = "container list-pits"> 
-    <%= link_to "Add New Pit", new_pit_path, id: "new_link", remote: true, class: "btn btn-default" %>
-  <br>
-  <br>
-  
-
-  <div class = "container", id = "pit_index">
-   <% @pits.each do |pit| %>
+ <div class = "container", id = "pit_index">
     <div class = "well"> 
        <h3 id="pit-title"><%= link_to pit.topic, pit_path(pit) %></h3>
        <p>by <%= link_to pit.author, '#' %></p>
@@ -19,10 +11,5 @@
 
             <%= link_to "View Pit", pit_path(pit), class: "btn btn-primary" %>
             <%= link_to "Delete Pit", pit_path(pit), remote: true, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary"  %>
-
       </div>
-      <% end %>
     </div>
-        
-    </div>
-
