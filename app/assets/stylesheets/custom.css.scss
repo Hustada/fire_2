@@ -20,7 +20,7 @@ html {
 }
 
 .container {
-  max-width: 1170px;
+  
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -364,7 +364,15 @@ p.dislike-pit {
 /* Pit List Page */
 
 .container.list-pits {
-  margin-top: 100px;
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing :border-box;
+  margin-top: 75px;
+}
+
+.well.list-well {
+  margin-bottom: 40px;
 }
 
 .well.pit-well {

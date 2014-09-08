@@ -1,12 +1,11 @@
-
-<div class = "container list-pits"> 
+<div class = "container list-pits", id = "list_pits"> 
     <%= link_to "Add New Pit", new_pit_path, id: "new_link", remote: true, class: "btn btn-default" %>
   <br>
   <br>
   
 
-  <div class = "container", id = "pit_index">
-   <% @pits.each do |pit| %>
+  <div id = "pit_index">
+   <% @pit.each do |pit| %>
     <div class = "well"> 
        <h3 id="pit-title"><%= link_to pit.topic, pit_path(pit) %></h3>
        <p>by <%= link_to pit.author, '#' %></p>
@@ -25,4 +24,3 @@
     </div>
         
     </div>
-

@@ -46,7 +46,7 @@ def destroy
   @pit.destroy
   respond_to do |format|
         format.html { redirect_to @pit }
-        format.js 
+        format.js {}
   end
 end
 
