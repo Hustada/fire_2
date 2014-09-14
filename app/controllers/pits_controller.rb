@@ -37,11 +37,18 @@ def edit
 end
 
 def update
-   @pit = Pit.find(pit_params[:id])
-     if @pit.update_attributes(pit_params)
+     @pit = Pit.find(params[:id])
+     if @pit.update(pit_params)
        redirect_to @pit
+     else
+      render :edit
      end
 end
+
+
+
+
+
 
 
 
