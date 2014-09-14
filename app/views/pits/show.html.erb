@@ -10,21 +10,18 @@
    </tr>
    <br>
    <br>
-     <ul class = "pit-creator-list">
+     <ul class = "pit-creator-list", id = "creator_list">
         <li>Email: <%= @pit.user.email %></li>
         <li>Pits Started: <%= @pit.user.pits.count %> </li>
         <li>Positive votes for (<%= @pit.get_likes.size.to_i %>)</li>
         <li>Negative votes for (<%= @pit.get_dislikes.size.to_i %>)</li>
       </ul>
       <% if can? :destroy, @pit %>
-      <%= link_to 'Delete Pit',        pit_path(@pit),
-                    method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-primary" %>
+      <%= link_to '|Delete Pit|',        pit_path(@pit),
+                    method: :delete, data: { confirm: 'Are you sure?'} %>
                     <% end %>
-                                                                      
-  
-
-
-  </div>
+      <%= link_to '|Edit|', edit_pit_path(@pit) %>              
+</div>
      <br>
         </div>
         <div class="col-md-4 pit-info">
@@ -43,8 +40,7 @@
           </div>
          </div>
 
-  
-  
+  <div class = "container">
   <div class="row">
       <div class="col-md-8">
         
@@ -83,13 +79,19 @@
     </div>
     <br>
     <br>
+      
     <h3>Responses</h3>
+  <div id = "comment_body">
     <%= render @pit.comments %>
-    <%= render "comments/form" %>
+  </div>
+    <%= render partial: "comments/form" %>
+  
+
 </li>
    
     </div>
-  </div>
+    </div>
+
 
 
 
@@ -113,4 +115,5 @@
 </div>
   </div>
 
+</div>
 </div>

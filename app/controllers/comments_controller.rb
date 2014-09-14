@@ -1,22 +1,35 @@
 class CommentsController < ApplicationController
   
 
+def new
+end
+
+def index
+end
 
  def create
   @pit= Pit.find(params[:pit_id])
-  @pits = Pit.order(created_at 'ASC')
   @comment = @pit.comments.build(comments_params)
   @comment.user = current_user
-  @comment.save
+  if @comment.save
+    respond_to do |format|
+      format.html { redirect_to pit_path(@pit)}
+      format.js  {}
+      end
+    end
+  end
+  
 
-  redirect_to pit_path(@pit)
-end
 
-  def destroy
-    @pit = Pit.find(params[:pit_id])
-    @comment = @pit.comments.find(params[:id])
-    @comment.destroy
-    redirect_to pit_path(@pit)
+
+def destroy
+  @pit = Pit.find(params[:pit_id])
+  @comment = @pit.comments.find(params[:id])
+  @comment.destroy
+    respond_to do |format|
+        format.html {redirect_to pit_path(@pit)}
+        format.js {}
+    end
 end
 
 def upvote

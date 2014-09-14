@@ -1,6 +1,6 @@
 class PitsController < ApplicationController
   before_action :current_user, only: [:create, :destroy]
-   before_action :correct_user,   only: :destroy
+  before_action :correct_user,   only: :destroy
 
 def new
   @pit = Pit.new
@@ -31,7 +31,9 @@ def show
   @pit = Pit.find(params[:id])
 end
 
+
 def edit
+  @pit = Pit.find(params[:id])
 end
 
 def update
@@ -40,6 +42,9 @@ def update
        redirect_to @pit
      end
 end
+
+
+
 
 def destroy
   @pit = Pit.find(params[:id])
