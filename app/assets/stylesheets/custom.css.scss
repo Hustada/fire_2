@@ -15,6 +15,27 @@ $grayMediumLight: #eaeaea;
 
 
 
+a.btn.btn-primary {
+  background-color: orange;
+  border-color: orange;
+}
+
+.sexy_line { 
+    margin: 25px 0;
+    height: 1px;
+    background: black;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, black));
+    }
+
+.panel {
+  border: 1px solid #777777;
+}
+
+.well {
+  border: 1px solid #777777;
+}
+
+
 html {
   overflow-y: scroll;
 }
@@ -104,7 +125,9 @@ p {
 
 /* Header */
 
-
+a#name-log {
+  color: orange;
+}
 
 .btn-lg {
   color: white;
@@ -139,7 +162,8 @@ display: block;
 
 #logo {
   float: left;
-  margin-top: 20px;
+
+  margin-top: 12px;
   font-size: 1.7em;
   color: #fff;
   text-transform: uppercase;
@@ -329,7 +353,11 @@ h3.pit-title {
   display: inline-block;
   color: #777777;
   list-style-type: none;
-  float: none;
+ }
+
+ div.pit-creator {
+  display: inline-block;
+  
  }
 
 p.like-summary {
@@ -424,6 +452,18 @@ p.like-response {
 
 /* Carousel */
 
+.carousel-indicators {
+  bottom: 0;
+}
+
+.carousel-indicators.active {
+  background-color: #222;
+}
+
+.carousel-indicators.li {
+  background-color: #222;
+}
+
 /* Layout */
 
 /*body {
@@ -440,29 +480,41 @@ p.like-response {
   text-align: center;
 }
 
-/* GlyphIcons */
+
+/* glyphicons */
 
 .glyphicon {
-  font-size: 3em;
+  font-size: 2.5em;
   color: #3a87ad;
   display: block;
   margin: auto;
   display: block;
 }
 
-.carousel-indicators {
-  bottom: 0;
+
+span.glyphicon.glyphicon-fire {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 5px;
+  color: orange;
 }
 
-.carousel-indicators.active {
-  background-color: #222;
+span.glyphicon.glyphicon-thumbs-up {
+font-size: 2em;
+color: #3a87ad;
+display: block;
+margin: 10px 10px;
+display: inline-block;
 }
 
-.carousel-indicators.li {
-  background-color: #222;
+
+span.glyphicon.glyphicon-thumbs-down {
+font-size: 2em;
+color: #3a87ad;
+display: block;
+margin: 10px 10px;
+display: inline-block;
 }
-
-
 
 
 

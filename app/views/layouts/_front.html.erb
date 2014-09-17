@@ -14,10 +14,10 @@
      <div class = "container">
        <div class = "jumbotron">
          <center><h1>Welcome to the Firepit!</h1>
-         <p>This is the place where sitting by the fire meets the digital world</p>
+         <p>Firepit discussions have now become virtual</p>
 
          <% if current_user && !current_user.sign_in_count.blank? && current_user.sign_in_count == 1 && session[:tour].blank? %>         
-         <p>Welcome to the Fire <%=link_to current_user.name, current_user %>!</p>
+         <p>Welcome to the Pit <%=link_to current_user.name, current_user %>!</p>
          <%= link_to "Start New Pit", new_pit_path, class: "btn btn-default" %>
          <%= link_to "Join Existing Pit", pits_path, class: "btn btn-default" %>
          <% elsif user_signed_in? %>

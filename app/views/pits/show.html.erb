@@ -8,19 +8,21 @@
       <td><%= image_tag avatar_url(@pit.user) %></td>
       <td><strong><%= @pit.user.name %></strong></td>
    </tr>
-   <br>
-   <br>
-     <ul class = "pit-creator-list", id = "creator_list">
+  
+   <div class = "pit-creator pull-right">
+     <ul class = "pit-creator-list">
         <li>Email: <%= @pit.user.email %></li>
         <li>Pits Started: <%= @pit.user.pits.count %> </li>
         <li>Positive votes for (<%= @pit.get_likes.size.to_i %>)</li>
         <li>Negative votes for (<%= @pit.get_dislikes.size.to_i %>)</li>
       </ul>
-      <% if can? :destroy, @pit %>
+   </div>
+      <% if @pit.user == current_user %>
       <%= link_to '|Delete Pit|',        pit_path(@pit),
                     method: :delete, data: { confirm: 'Are you sure?'} %>
+      <%= link_to '|Edit|', edit_pit_path(@pit) %>  
                     <% end %>
-      <%= link_to '|Edit|', edit_pit_path(@pit) %>              
+                  
 </div>
      <br>
         </div>
@@ -64,14 +66,15 @@
       <p><%= @pit.summary %></p>
       <p>by <%= @pit.author %></p>
         <% end %>
-
+  <div class="sexy_line"></div>
 
     <br>
     <br>
     <div class = "like-argument">
       <p class = "like-summary">Was this argument convincing to you?</p>
-        <%= link_to "Yes", pit_like_path(@pit), method: :put, class: "btn btn-default" %>
-        <%= link_to "No", pit_dislike_path(@pit), method: :put, class: "btn btn-default" %>
+        <%= link_to "<span class=\"glyphicon glyphicon-thumbs-up\"></span>".html_safe, pit_dislike_path(@pit), method: :put %>
+        <%= link_to "<span class= \"glyphicon glyphicon-thumbs-down\"></span>".html_safe, pit_dislike_path(@pit), method: :put %>
+
     </div>
     <div class = "pit-rep">
       <p class = "like-pit"><%= @pit.get_likes.size %> users found this argument convincing</p>

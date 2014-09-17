@@ -10,11 +10,8 @@
     </div>
 
     <div class = "response-convince">
-      <p class = "dislike-comment">
-        <%= comment.get_dislikes.size %> users found this response unpersuasive
-      </p>
-       <p class = "like-comment">
-        <%= comment.get_likes.size %> users found this response persuasive</p>
+      <p class = "dislike-comment"><%= comment.get_likes.size %> users found this response persuasive</p>
+       <p class = "like-comment"><%= comment.get_dislikes.size %> users found this response unpersuasive</p>
       </p>
     </div>
     <p>
@@ -22,9 +19,9 @@
 
     <%if comment.user == current_user %>
 
-     <%= link_to 'Destroy Comment', [@pit, comment],
+     <%= link_to 'Delete Comment', [@pit, comment],
                  method: :delete,
-                 data: { confirm: 'Are you sure?' }, remote: true, class: "btn btn-primary" %>
+                 data: { confirm: 'Are you sure?' }, remote: true, class: "btn btn-default" %>
     </p>
   <% end %>  
 </div>
