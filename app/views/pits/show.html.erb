@@ -72,7 +72,7 @@
     <br>
     <div class = "like-argument">
       <p class = "like-summary">Was this argument convincing to you?</p>
-        <%= link_to "<span class=\"glyphicon glyphicon-thumbs-up\"></span>".html_safe, pit_dislike_path(@pit), method: :put %>
+        <%= link_to "<span class=\"glyphicon glyphicon-thumbs-up\"></span>".html_safe, pit_like_path(@pit), method: :put %>
         <%= link_to "<span class= \"glyphicon glyphicon-thumbs-down\"></span>".html_safe, pit_dislike_path(@pit), method: :put %>
 
     </div>

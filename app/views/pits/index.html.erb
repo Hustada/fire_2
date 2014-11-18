@@ -16,8 +16,8 @@
 
             <p>Pit Created by: <%= link_to pit.user.name, pit.user %> on <%= pit.created_at %></p>
 
-            <%= link_to "View Pit", pit_path(pit), class: "btn btn-primary" %>
-            <%= link_to "Delete Pit", pit_path(pit), method: :delete, data: { confirm: 'Are you sure?' }, remote: true,  class: "btn btn-primary"  %>
+            <%= link_to "View Pit", pit_path(pit), class: "btn btn-default" %>
+            <%= link_to "Delete Pit", pit_path(pit), method: :delete, data: { confirm: 'Are you sure?' }, remote: true,  class: "btn btn-default"  %>
 
       </div>
       <% end %>

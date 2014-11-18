@@ -21,6 +21,7 @@ gem 'carrierwave'
 gem 'cancancan', '~> 1.9'
 
 
+
 group :development do
   gem 'rails_layout'
   

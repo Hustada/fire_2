@@ -1,6 +1,17 @@
 @import "bootstrap";
 
+/*.container {
+  border: 1px solid black;
+}
 
+.row {
+  border: 1px solid black;
+}
+
+.jumbotron, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  border: 1px solid black;
+}
+*/
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -14,11 +25,35 @@ $grayMediumLight: #eaeaea;
 /* universal */
 
 
-
-a.btn.btn-primary {
-  background-color: orange;
-  border-color: orange;
+body {
+  background: #D3D3D3;
 }
+
+#front-info {
+  padding-bottom: 20px;
+  background: #D3D3D3;
+  background-color: rgba(0,0,0,0.7);
+}
+
+
+
+#front-info p {
+  color: white;
+}
+
+body.home {
+  background-image: image-url('firepit2.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: 70px;
+  
+}
+
+body {
+  margin-bottom: 70px;
+}
+
+
 
 .sexy_line { 
     margin: 25px 0;
@@ -78,6 +113,7 @@ textarea {
 
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lobster', Georgia, Times, serif;
   line-height: 1;
 }
 
@@ -86,7 +122,15 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
-}
+  font-family: 'Lobster', Georgia, Times, serif;
+  font-size: 70px;
+  line-height: 100px;
+  }
+
+  h1#front-title {
+    color: #E56F3C;
+    font-family: 'Lobster', Georgia, Times, serif;
+  }
 
 h2 {
   letter-spacing: -1px;
@@ -96,6 +140,11 @@ h2 {
   font-size: 93px;
   color: white;
   font-family: Helvetica;
+}
+
+h3 a {
+  font-family: 'Lobster', Georgia, Times, serif;
+  color: #E56F3C !important;
 }
 
 
@@ -111,9 +160,40 @@ background-color: #eeeeee;
 }
 
 p {
-  font-size: 1.1em;
+  font-family: 'Cabin', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  /*font-size: 1.1em;
   line-height: 1.7em;
+  /*color: #D3D3D3;*/
 }
+
+p a {
+  color: #E56F3C;
+}
+
+
+
+/* jumbotron */
+
+
+.jumbotron {
+  text-align: center;
+}
+
+#front-jumbotron {
+  margin-top: 150px;
+  background-color: rgba(0,0,0,0.7);
+  padding-bottom: 50px;
+}
+
+#front-jumbotron a {
+  color: #E56F3C;
+}
+
+/*a.btn.btn-default {
+  
+}*/
 
 
 /* About */
@@ -126,7 +206,7 @@ p {
 /* Header */
 
 a#name-log {
-  color: orange;
+  color: #E56F3C;
 }
 
 .btn-lg {
@@ -161,8 +241,8 @@ display: block;
 }
 
 #logo {
+  font-family: 'Cabin', Helvetica, Arial, sans-serif;
   float: left;
-
   margin-top: 12px;
   font-size: 1.7em;
   color: #fff;
@@ -208,55 +288,6 @@ text-align: center;
   
 }
 
-/* logged in user buttons home */
-
-.btn-default-start {
-  text-align: center;
-  background-color: transparent;
-  display: block;
-  width: 10%;
-  color: #db522f;
-  margin: 0px auto;
-  text-transform: uppercase;
-  font-size: 15px;
-  font-weight: bolder;
-  -webkit-border-radius: 9px;
-  border-radius: 9px;
-  padding: 10px 15px;
-  border: 1px solid;
-  border-color: #cccccc;
-}
-
-
-.btn-default-start:hover {
-  background-color: white;
-  text-decoration: none;
-}
-
-.btn-default-join {
-  text-align: center;
-  background-color: transparent;
-  display: block;
-  width: 10%;
-  color: #db522f;
-  margin: 0px auto;
-  text-transform: uppercase;
-  font-size: 15px;
-  font-weight: bold;
-  -webkit-border-radius: 9px;
-  border-radius: 9px;
-  padding: 10px 15px;
-  border: 1px solid;
-  border-color: #cccccc;
-}
-
-.btn-default-join:hover {
-  background-color: white;
-  text-decoration: none;
-}
-
-
-
 .header-description {
   margin: 100px 0 80px;
 }
@@ -270,16 +301,12 @@ text-align: center;
 
 
 .nav li a {
+  font-family: 'Cabin', Helvetica, Arial, sans-serif;
   color: #db522f;
 }
 
 /* home-footer */
- .footer-button {
-  background-color: #777777;
-  border: #777777;
- }
-
-
+ 
 
 .col-md-4 {
   width: 33.3%;
@@ -337,6 +364,7 @@ h3.pit-title {
 .list-group.pit-user-list {
   color: #777777;
   list-style-type: none;
+  font-family: 'Cabin', Helvetica, Arial, sans-serif;
 }
 
 .panel-heading.pit-info {
@@ -347,6 +375,7 @@ h3.pit-title {
 .list-group.pit-info-list {
   color: #777777;
   list-style-type: none;
+  font-family: 'Cabin', Helvetica, Arial, sans-serif;
 }
 
 .pit-creator-list {
@@ -464,21 +493,9 @@ p.like-response {
   background-color: #222;
 }
 
-/* Layout */
 
-/*body {
-  padding-top: 50px;
-}
 
-.container {
-  max-width: 1000px;
-}*/
 
-/* Jumbotron */
-
-.jumbotron {
-  text-align: center;
-}
 
 
 /* glyphicons */
@@ -496,7 +513,7 @@ span.glyphicon.glyphicon-fire {
   display: inline-block;
   margin-left: 10px;
   margin-top: 5px;
-  color: orange;
+  color: #E56F3C;
 }
 
 span.glyphicon.glyphicon-thumbs-up {

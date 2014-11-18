@@ -4,34 +4,30 @@
 
   <title>The Firepit</title>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
 </head>
+<%= yield %> 
 
-<body>
-
-      
-
-      
-        <%= render 'layouts/front_header' %>
+  <%= render 'layouts/front_header' %>
         
-      
-    
-      
-
-    
-       
-       
-
-
-      <%= yield %>
-
-       <%= debug(params) if Rails.env.development? %>
-
-  </body>
-
   <%= render 'layouts/home_footer' %>
+
+ 
+
+
+ 
+
+
+
+
+
+  
+
 </html>
+
