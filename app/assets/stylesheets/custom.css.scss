@@ -113,7 +113,7 @@ textarea {
 
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lobster', Georgia, Times, serif;
+  font-family: 'Cabin', Georgia, Times, serif;
   line-height: 1;
 }
 
@@ -122,14 +122,15 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
-  font-family: 'Lobster', Georgia, Times, serif;
+  font-family: 'Cabin', Georgia, Times, serif;
   font-size: 70px;
   line-height: 100px;
   }
 
   h1#front-title {
     color: #E56F3C;
-    font-family: 'Lobster', Georgia, Times, serif;
+    font-family: 'Cabin', Georgia, Times, serif;
+    text-transform: uppercase;
   }
 
 h2 {
@@ -143,7 +144,7 @@ h2 {
 }
 
 h3 a {
-  font-family: 'Lobster', Georgia, Times, serif;
+  font-family: 'Cabin', Georgia, Times, serif;
   color: #E56F3C !important;
 }
 
@@ -188,8 +189,13 @@ p a {
 }
 
 #front-jumbotron a {
-  color: #E56F3C;
+  color: #777777;
 }
+
+.jumbotron p {
+  color: #777777;
+}
+
 
 /*a.btn.btn-default {
   
@@ -306,7 +312,9 @@ text-align: center;
 }
 
 /* home-footer */
- 
+
+
+
 
 .col-md-4 {
   width: 33.3%;
