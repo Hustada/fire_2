@@ -2,8 +2,8 @@
   <div class="row">
     
 
-   <div class="col-md-8 pit-starter-info">
-     <div class="well"> 
+   <div class="col-md-8">
+     <div class="well pit-starter-info"> 
   <tr>
       <td><%= image_tag avatar_url(@pit.user) %></td>
       <td><strong><%= @pit.user.name %></strong></td>
@@ -42,31 +42,29 @@
           </div>
          </div>
 
-  <div class = "container">
+<div class = "container">
   <div class="row">
       <div class="col-md-8">
-        
-<div class="well">
-    
-    
-        <% if @pit.video_url? %>
-    <h3 class="pit-title"><%= @pit.topic %></h3>
-    <div class="embed-responsive embed-responsive-16by9">
-       <iframe class="embed-responsive-item" src=<%= @pit.video_url %> allowfullscreen></iframe>
+        <div class="well">
+          <% if @pit.video_url? %>
+          <h3 class="pit-title"><%= @pit.topic %></h3>
+            <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src=<%= @pit.video_url %> allowfullscreen></iframe>
        </div>
-      <p><%= @pit.summary %></p>
-      <p>by <%= @pit.author %></p>
+          <p><%= @pit.summary %></p>
+          <p>by <%= @pit.author %></p>
         <% elsif %>
-    <h3 class="pit-title"><%= @pit.topic %></h3>
-    <div class = "pit-image"><%= image_tag @pit.image_url %></div>
-      <p><%= @pit.summary %></p>
-      <p>by <%= @pit.author %></p>
+          <h3 class="pit-title"><%= @pit.topic %></h3>
+            <div class = "pit-image"><%= image_tag @pit.image_url %></div>
+              <p><%= @pit.summary %></p>
+              <p>by <%= @pit.author %></p>
         <% else %>
-    <h3 class="pit-title"><%= @pit.topic %></h3>
-      <p><%= @pit.summary %></p>
-      <p>by <%= @pit.author %></p>
+          <h3 class="pit-title"><%= @pit.topic %></h3>
+            <p><%= @pit.summary %></p>
+            <p>by <%= @pit.author %></p>
         <% end %>
-  <div class="sexy_line"></div>
+  
+      <div class="sexy_line"></div>
 
     <br>
     
