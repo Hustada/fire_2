@@ -1,24 +1,3 @@
-<div class="container pit-show">
-  <div class="row">
-    
-
-   <div class="col-md-8">
-     <div class="well pit-starter-info"> 
-  <tr>
-      <td><%= image_tag avatar_url(@pit.user) %></td>
-      <td><strong><%= @pit.user.name %></strong></td>
-   </tr>
-  
-   <div class = "pit-creator pull-right">
-     <ul class = "pit-creator-list">
-        <li>Email: <%= @pit.user.email %></li>
-        <li>Pits Started: <%= @pit.user.pits.count %> </li>
-        <li>Positive votes for (<%= @pit.get_likes.size.to_i %>)</li>
-        <li>Negative votes for (<%= @pit.get_dislikes.size.to_i %>)</li>
-      </ul>
-   </div>
-      <% if @pit.user == current_user %>
-
 <div class = "container" id = "pit-show">
     <div class = "row">
       <div class = "col-md-3">
@@ -36,52 +15,11 @@
             <li>Negative votes for (<%= @pit.get_dislikes.size.to_i %>)</li>
           </ul>
           <% if @pit.user == current_user %>
-
       <%= link_to '|Delete Pit|',        pit_path(@pit),
                     method: :delete, data: { confirm: 'Are you sure?'} %>
       <%= link_to '|Edit|', edit_pit_path(@pit) %>  
                     <% end %>
         </div>
-
-        <div class="col-md-4 pit-info">
-          <div class="panel panel-default">
-              <div class = "panel-heading pit-info">
-                <h3 class = "panel-title">Pit Info</h3>
-            </div>
-            <div class = "panel-body">
-              <ul class = "list-group pit-info-list">
-                <li>Pit Views</li>
-                <li>Pit Ranking</li>
-                <li>Pit Category - Book - Philosophy</li>
-                <li> Persuasive responses ( <%= @convincing_response %> )</li>
-              </ul>
-            </div>
-          </div>
-         </div>
-
-<div class = "container">
-  <div class="row">
-      <div class="col-md-8">
-        <div class="well">
-          <% if @pit.video_url? %>
-          <h3 class="pit-title"><%= @pit.topic %></h3>
-            <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src=<%= @pit.video_url %> allowfullscreen></iframe>
-       </div>
-          <p><%= @pit.summary %></p>
-          <p>by <%= @pit.author %></p>
-        <% elsif %>
-          <h3 class="pit-title"><%= @pit.topic %></h3>
-            <div class = "pit-image"><%= image_tag @pit.image_url %></div>
-              <p><%= @pit.summary %></p>
-              <p>by <%= @pit.author %></p>
-        <% else %>
-          <h3 class="pit-title"><%= @pit.topic %></h3>
-            <p><%= @pit.summary %></p>
-            <p>by <%= @pit.author %></p>
-        <% end %>
-  
-      <div class="sexy_line"></div>
         <div class = "info-block">
         <h4 class = "member-info">Current Pit Members</h4>
           <ul class = "list-group pit-info-list">
@@ -92,7 +30,6 @@
           </ul>
         </div>
       </div>
-
 
     <% if @pit.video_url? %>
       <div class = "col-md-7">
