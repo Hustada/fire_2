@@ -9,7 +9,8 @@ end
 def index
   @pit = Pit.all
   @user = User.find_by(params[:id])
-  @pits = Pit.order('created_at ASC')
+  
+  @pits = Pit.order('created_at DESC').paginate(:per_page => 2, :page => params[:page])
 end
 
 
