@@ -57,7 +57,7 @@
     <div class = "col-md-7">
         <center><h3 class = "pit-title"><%= @pit.topic %></h3></center>
         <div class="sexy_line"></div>
-             <p><%= @pit.summary %></a></p>
+             <p><%= simple_format @pit.summary %></a></p>
              <p>by: <%= @pit.author %></p>
         <div class="sexy_line"></div>
 
@@ -83,34 +83,10 @@
       <br>
      <div class="actionBox">
       <h3>Comments</h3>
-        <ul class="commentList">
-            <li>
-                <div class="commenterImage">
-                  <img src="http://lorempixel.com/50/50/people/6" />
-                </div>
-                <div class="commentText">
-                    <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
+        <%= render @pit.comments %>
+        <%= render "comments/form" %>
 
-                </div>
-            </li>
-        </ul>
-
-        <%= form_for([@pit, Comment.new]) do |f| %>
-  
-
-        <form class="form-inline" role="form">
-            <div class="form-group" id = "comment-body">
-                <%= f.text_field :body, autofocus: true   %>
-            </div>
-
-            <div class="form-inline">
-              <input class="btn btn-default" name="commit" type="submit" value="Leave a Comment">
-            </div>
-        </form>
-        <% end %>
-    </div>
-</div>
-          </div>
         </div>
-          </div>
-    </div>
+      </div>
+  </div>
+</div>

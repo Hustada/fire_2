@@ -19,6 +19,7 @@ gem 'will_paginate-bootstrap'
 gem 'acts_as_votable'
 gem 'carrierwave'
 gem 'cancancan', '~> 1.9'
+gem 'auto_html'
 
 
 

@@ -1,11 +1,15 @@
-<%= form_for([@pit, Comment.new], remote: true) do |f| %>
-  <p>
-    <%= f.label :body %>
-    <br>
-    <%= f.text_area :body, :size=>"30" %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<%= form_for([@pit, Comment.new]) do |f| %>
+  
 
+        <form class="form-inline" role="form">
+            <div class="form-group" id = "comment-body">
+                <%= f.text_field :body, autofocus: true   %>
+            </div>
+
+            <div class="form-inline">
+              <input class="btn btn-default" name="commit" type="submit" value="Leave a Comment">
+            </div>
+        </form>
+        <% end %>
+    </div>
+</div

@@ -50,9 +50,8 @@ def update
 end
 
     
+def show
 
-
-def show  
 end
 
   private
