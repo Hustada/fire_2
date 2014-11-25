@@ -4,12 +4,13 @@
         <div class = "info-block">
         <h4 class = "pit-info">Pit</h4>
           <ul class = "list-group pit-info-list">
+            <li>Pit started by: <%= @pit.user.name %></li>
             <li>Pit Views</li>
             <li>Pit Ranking</li>
             <li>Pit Category - Book - Philosophy</li>
             <li> Persuasive responses ( <%= @convincing_response %> )</li>
             <li>Email: <%= @pit.user.email %></li>
-            <li>Pits Started: <%= @pit.user.pits.count %> </li>
+            <li>Pits Burned: <%= @pit.user.pits.count %> </li>
             <li>Positive votes for (<%= @pit.get_likes.size.to_i %>)</li>
             <li>Negative votes for (<%= @pit.get_dislikes.size.to_i %>)</li>
           </ul>
@@ -55,9 +56,10 @@
       
     <div class = "col-md-7">
         <center><h3 class = "pit-title"><%= @pit.topic %></h3></center>
+        <div class="sexy_line"></div>
              <p><%= @pit.summary %></a></p>
              <p>by: <%= @pit.author %></p>
-      <div class="sexy_line"></div>
+        <div class="sexy_line"></div>
 
       <div class = "like-argument">
         <p class = "like-summary">Was this summary convincing to you?</p>

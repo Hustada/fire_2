@@ -8,7 +8,7 @@
    <% @pit.each do |pit| %>
     <div class = "well"> 
        <h3 id="pit-title"><%= link_to pit.topic, pit_path(pit) %></h3>
-       <p>by <%= link_to pit.author, '#' %></p>
+       <p>by: <%= link_to pit.author, '#' %></p>
           <br>
             <p><%= pit.summary %></p>
             <p>Replies (<%= pit.comments.count %>)</p>
@@ -22,6 +22,8 @@
             <%= link_to "Delete Pit", pit_path(pit), method: :delete, data: { confirm: 'Are you sure?' }, remote: true,  class: "btn btn-default"  %>
             <% end %>
     </div>
-      <% end %>
+            <% end %>
   </div>
+           <%= will_paginate @pits, renderer: BootstrapPagination::Rails %>
 </div>
+
