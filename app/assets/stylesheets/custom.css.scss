@@ -10,8 +10,8 @@
 
 .jumbotron, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
   border: 1px solid black;
-}*/
-
+}
+*/
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -503,6 +503,8 @@ p.like-response {
 }
 
 
+
+
 /* Carousel */
 
 .carousel-indicators {
@@ -626,5 +628,9 @@ detailBox {
 .actionBox {
     border-top:1px dotted #bbb;
     padding:10px;
+}
+
+#comment-body {
+  width: 90% !important;
 }
 
