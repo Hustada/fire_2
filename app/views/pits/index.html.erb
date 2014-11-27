@@ -10,8 +10,8 @@
        <h3 id="pit-title"><%= link_to pit.topic, pit_path(pit) %></h3>
        <p>by: <%= link_to pit.author, '#' %></p>
           <br>
-            <p><%= pit.summary %></p>
-            <p>Replies (<%= pit.comments.count %>)</p>
+            <p><%= truncate(pit.summary, :length => 100) %></p>
+            <p>Replies (<%=link_to "#{pit.comments.count}", pit_path(pit) %>)</p>
           <br>
 
             <p>Pit Created by: <%= link_to pit.user.name, pit.user %> on <%= pit.created_at %></p>

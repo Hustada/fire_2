@@ -30,6 +30,7 @@ end
 
 def show
   @pit = Pit.find(params[:id])
+ 
 end
 
 
