@@ -466,11 +466,35 @@ p.dislike-pit {
   margin-top: 100px;
 }
 
+.user-pit-list {
+  list-style-type: none;
+  margin-left: -40px;
+}
+
+#well-profile {
+  background-color: black;
+  color: #777;
+  padding: 20px;
+}
+
+#sexy_line {
+  margin: 25px 0;
+  height: 1px;
+  color: #777;
+}
+
+#well-profile a {
+  color: #777;
+}
+
+#well-profile h4, h3 {
+  color: #E56F3C;
+}
+
 /* User Sign In */
 
 h3.user-sign-in {
     color: black;
-    text-align: left;
   }
  
 .container.user-sign-in {
