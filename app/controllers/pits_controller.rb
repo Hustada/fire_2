@@ -7,10 +7,15 @@ def new
 end
 
 def index
+  if params[:tag]
+  @pit = Pit.tagged_with(params[:tag])
+  @user = User.find_by(params[:id])
+  @pits = Pit.paginate(page: params[:page])
+else
   @pit = Pit.all
   @user = User.find_by(params[:id])
-  
-  @pits = Pit.order('created_at DESC').paginate(:per_page => 2, :page => params[:page])
+  @pits = Pit.paginate(page: params[:page])
+end
 end
 
 
@@ -30,7 +35,6 @@ end
 
 def show
   @pit = Pit.find(params[:id])
- 
 end
 
 
@@ -86,7 +90,7 @@ def correct_user
   end
 
 def pit_params
-    params.require(:pit).permit(:topic, :summary, :image, :video_url, :author, :user_id)
+    params.require(:pit).permit(:topic, :summary, :image, :video_url, :author, :user_id, :tag_list)
 end
 
 end

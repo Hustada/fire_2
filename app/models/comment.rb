@@ -11,5 +11,7 @@ class Comment < ActiveRecord::Base
     simple_format
   end
 
+ 
+
 
 end

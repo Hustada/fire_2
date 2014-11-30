@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
     name = first_name + ' ' + last_name
   end
 
+  
+
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

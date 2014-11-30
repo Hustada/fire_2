@@ -7,8 +7,7 @@
             <li>Pit started by: <%= @pit.user.name %></li>
             <li>Pit Views</li>
             <li>Pit Ranking</li>
-            <li>Pit Category - Book - Philosophy</li>
-            <li> Persuasive responses ( <%= @convincing_response %> )</li>
+            <li>Positive responses ( <%= @convincing_response %> )</li>
             <li>Email: <%= @pit.user.email %></li>
             <li>Pits Burned: <%= @pit.user.pits.count %> </li>
             <li>Positive votes for (<%= @pit.get_likes.size.to_i %>)</li>
@@ -34,11 +33,14 @@
     <% if @pit.video_url? %>
       <div class = "col-md-7">
         <center><h3 class = "pit-title"><%= @pit.topic %></h3></center>
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src=<%= @pit.video_url %> allowfullscreen></iframe>
-          </div>
+          
+            <div class="embed-container">  
+              <%= embed(@pit.video_url) %>
+            </div>         
+          
              
-             <p><%= @pit.summary_html %></a></p>
+             <p><%= simple_format @pit.summary_html %></a></p>
+             <p>Tags: <%= raw @pit.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
              <p>by: <%= @pit.author %></p>
           <div class="sexy_line"></div>
           <div class = "like-argument">
@@ -58,7 +60,8 @@
     <div class = "col-md-7">
         <center><h3 class = "pit-title"><%= @pit.topic %></h3></center>
         <div class="sexy_line"></div>
-             <p><%= simple_format @pit.summary %></a></p>
+             <p><%= simple_format @pit.summary_html %></a></p>
+             <p>Tags: <%= raw @pit.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
              <p>by: <%= @pit.author %></p>
         <div class="sexy_line"></div>
 
@@ -77,6 +80,7 @@
 
   
   <div class = "col-md-2">
+    
   </div>
 
 <div class = "row">

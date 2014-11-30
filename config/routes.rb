@@ -16,10 +16,8 @@ Rails.application.routes.draw do
     end
   end
   
+get 'tags/:tag', to: 'pits#index', as: :tag
 
-
-
-
-  root to: 'pages#home'
+root to: 'pages#home'
   get '/about' => 'pages#about'
 end

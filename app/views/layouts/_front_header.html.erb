@@ -26,8 +26,8 @@
               <li><%= link_to "About", about_path %></li>
               <% if user_signed_in? %>
               <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Logout", destroy_user_session_path,:method => :delete %></li>
               <li><%= link_to "Pits", pits_path %></li>
+              <li><%= link_to "Logout", destroy_user_session_path,:method => :delete %></li>
               <li><a class id = "name-log">(<%= current_user.name %>)</a></li>
               <% else %>
               <li><%= link_to "Sign in", user_session_path %></li>

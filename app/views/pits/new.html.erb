@@ -36,13 +36,19 @@
            <div class="form-group">
                    <%= f.label :video, class: "col-sm-2 control-label" %>
              <div class="col-sm-6">
-                   <%= f.text_field :video_url, class: "form-control", :placeholder => "example: //www.youtube.com/embed/hBHYdK9xtYs (video is optional)" %>
-                   <p class = "youtube-instruction">Must use the shared -> embed option</p>
+                   <%= f.text_field :video_url, class: "form-control", :placeholder => "Paste Youtube URL here (video is optional)" %>
+             </div>  
+           </div>
+
+           <div class="form-group">
+                   <%= f.label :tag_list, class: "col-sm-2 control-label" %>
+             <div class="col-sm-6">
+                   <%= f.text_field :tag_list, class: "form-control", :placeholder => "Tags (separated by commas)" %>
              </div>  
            </div>
           <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-6">
-                      <%= f.submit "Start Pit", class: "btn btn-primary" %>
+                      <%= f.submit "Start Pit", class: "btn btn-default" %>
                </div>
           </div>
         </div>
