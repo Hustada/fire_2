@@ -24,8 +24,10 @@ gem 'acts-as-taggable-on', '~> 3.4'
 
 
 
+
 group :development do
   gem 'rails_layout'
+  gem 'mailcatcher'
   
 end
 

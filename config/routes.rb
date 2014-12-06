@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     put "like", to: "pits#upvote"
       put "dislike", to: "pits#downvote"
     resources :comments do
+      put "edit", to: "comments#edit"
       put "like", to: "comments#upvote"
       put "dislike", to: "comments#downvote"
     end

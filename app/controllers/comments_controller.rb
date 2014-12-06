@@ -46,9 +46,28 @@ def downvote
   redirect_to pit_path(@pit)
 end
 
-def update
+def edit
+    @pit = Pit.find(params[:pit_id])
+    @comment = @pit.comments.find(params[:id])
 end
 
+def update
+    @pit = Pit.find(params[:pit_id])
+    @comment = @pit.comments.find(params[:id])
+  if @comment.update(comments_params)
+      redirect_to pit_path(@pit)
+    else
+      render 'edit'
+    end
+  end
+
+def destroy
+  @pit = Pit.find(params[:pit_id])
+  @comment = @pit.comments.find(params[:id])
+if @comment.destroy
+    redirect_to pit_path(@pit)
+end
+end
     
 def show
 end

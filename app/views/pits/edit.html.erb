@@ -1,4 +1,4 @@
-<div class = "container">
+<div class = "container", id = "pit_edit">
 
 
 
@@ -7,31 +7,35 @@
 
 
 
-  <legend>Pit Edit</legend>
+  <h4>Edit Pit</h4>
 
 
   <%= f.input :topic, required: true, autofocus: true %>
 
+  <br>
 
-   <%= f.input :author, class: "col-sm-2 control-label" %>  
+  <%= f.input :author, class: "col-sm-2 control-label" %>  
 
-  <%= f.input :summary, autocomplete: "off"%>
+  <br>
 
+  <%= f.input :summary,  autocomplete: "off" %>
+
+  <br>
   
   <%= f.input :image, class: "col-sm-2 control-label" %>
 
-
+   <br>
+  
   <%= f.input :video_url, class: "col-sm-2 control-label" %>
-
- 
-
 
   <%= f.input :password, class: "col-sm-2 control-label" %>
 
 
   <%= f.input :password_confirmation, class: "col-sm-2 control-label" %>
+   
+   <br>
 
+  <%= f.submit(type: 'submit', class: "btn btn-default") %>
 
-   <%= f.submit %>
  </div>
  <% end %>

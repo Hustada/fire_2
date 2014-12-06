@@ -189,7 +189,7 @@ p a {
 }
 
 #front-jumbotron a {
-  color: #777777;
+  color: #E56F3C;
 }
 
 .jumbotron p {
@@ -197,9 +197,7 @@ p a {
 }
 
 
-/*a.btn.btn-default {
-  
-}*/
+
 
 
 /* About */
@@ -388,6 +386,10 @@ h3.pit-title {
   margin-top: 55px;
 }
 
+.info-block a {
+  color: #E56F3C;
+}
+
 .list-group.pit-info-list {
   color: #777777;
   list-style-type: none;
@@ -435,7 +437,11 @@ p.dislike-pit {
   margin-bottom: 20px;
 }
 
+/* Edit Pit */
 
+#pit_edit {
+  margin-top: 100px;
+}
 
 /* Pit List Page */
 
@@ -469,6 +475,7 @@ p.dislike-pit {
 .user-pit-list {
   list-style-type: none;
   margin-left: -40px;
+
 }
 
 #well-profile {
@@ -526,7 +533,13 @@ p.like-response {
   text-align: right;
 }
 
+#comment_edit {
+  margin-top: 100px;
+}
 
+.date.sub-text a {
+  color: #E56F3C;
+}
 
 
 /* Carousel */
@@ -544,7 +557,9 @@ p.like-response {
 }
 
 
-
+.user-sign-in a {
+  color: #E56F3C;
+}
 
 
 
