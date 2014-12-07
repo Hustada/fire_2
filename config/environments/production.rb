@@ -78,7 +78,7 @@
     :password  => ENV["MANDRILL_API_KEY"]
   }
   # ActionMailer Config
-  config.action_mailer.default_url_options = { :host => heroku.com }
+  config.action_mailer.default_url_options = { :host => peaceful-anchorage-4605.herokuapp.com }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
