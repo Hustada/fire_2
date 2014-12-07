@@ -27,6 +27,7 @@ $grayMediumLight: #eaeaea;
 
 body {
   background: #D3D3D3;
+  margin-bottom: 70px;
 }
 
 #front-info {
@@ -44,14 +45,14 @@ body {
 body.home {
   background-image: image-url('firepit2.jpg');
   background-repeat: no-repeat;
-  background-size: 100%;
-  margin-bottom: 70px;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
   
 }
 
-body {
-  margin-bottom: 70px;
-}
+
 
 
 
@@ -129,9 +130,13 @@ h1 {
 
   h1#front-title {
     color: #E56F3C;
-    font-family: 'Cabin', Georgia, Times, serif;
+    font-family: 'Fredericka the Great', sans-serif;
     text-transform: uppercase;
   }
+
+h1:hover {
+ text-shadow  :  0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+}
 
 h2 {
   letter-spacing: -1px;
@@ -196,7 +201,11 @@ p a {
   color: #777777;
 }
 
+/* Front page */
 
+.info-title a {
+  font-family: 'Fredericka the Great', sans-serif;
+}
 
 
 
@@ -693,6 +702,26 @@ detailBox {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* confirmations */
+
+#resend-confirm.container {
+  margin-top: 100px;
+}
+
+#resend-confirm.container a {
+  color: #E56F3C;
+}
+
+/* edit profile */
+
+#edit-profile.container {
+  margin-top: 100px;
+}
+
+#edit-profile.container a {
+  color: #E56F3C;
 }
 
 

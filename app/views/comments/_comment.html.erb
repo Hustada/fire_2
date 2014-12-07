@@ -5,7 +5,7 @@
                   <%= image_tag avatar_url(comment.user) %>
                 </div>
                 <div class="commentText">
-                    <p class=""><%= comment.body_html %></p> <span class="date sub-text">by: <%= comment.user.name %> on <%= comment.created_at.strftime("%d %b. %Y") %> <%= link_to 'Edit', pit_comment_edit_path(@pit, comment) %> <%= link_to 'Remove comment', [@pit, comment], method: :delete, data: { confirm: 'Are you sure?'} %> </p></span>
+                    <p class=""><%= comment.body_html %></p> <span class="date sub-text">by: <%= comment.user.name %> on <%= comment.created_at.strftime("%d %b. %Y") %> <%= link_to 'Edit', pit_comment_edit_path(@pit, comment) %> | <%= link_to 'Remove comment', [@pit, comment], method: :delete, data: { confirm: 'Are you sure?'} %> </p></span>
                </div>
 
             </li>

@@ -44,7 +44,7 @@
              <p>by: <%= @pit.author %></p>
           <div class="sexy_line"></div>
           <div class = "like-argument">
-            <p class = "like-summary">Was this summary convincing to you?</p>
+            <p class = "like-summary">Upvote or dowvote pit</p>
               <%= link_to "<span class=\"glyphicon glyphicon-thumbs-up\"></span>".html_safe, pit_like_path(@pit), method: :put %>
               <%= link_to "<span class= \"glyphicon glyphicon-thumbs-down\"></span>".html_safe, pit_dislike_path(@pit), method: :put %>
           </div>
@@ -66,7 +66,7 @@
         <div class="sexy_line"></div>
 
       <div class = "like-argument">
-        <p class = "like-summary">Was this summary convincing to you?</p>
+        <p class = "like-summary">Upvote or downvote pit</p>
           <%= link_to "<span class=\"glyphicon glyphicon-thumbs-up\"></span>".html_safe, pit_like_path(@pit), method: :put %>
           <%= link_to "<span class= \"glyphicon glyphicon-thumbs-down\"></span>".html_safe, pit_dislike_path(@pit), method: :put %>
       </div>

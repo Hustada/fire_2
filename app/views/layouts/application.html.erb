@@ -6,12 +6,16 @@
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
 </head>
+
+
 <%= yield %> 
 
   <%= render 'layouts/front_header' %>
