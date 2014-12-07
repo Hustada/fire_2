@@ -21,6 +21,7 @@ gem 'carrierwave'
 gem 'cancancan', '~> 1.9'
 gem 'auto_html'
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'figaro'
 
 
 
