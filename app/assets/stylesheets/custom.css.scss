@@ -1,5 +1,5 @@
 @import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great);
+@import url('//fonts.googleapis.com/css?family=Fredericka+the+Great');
 
 /*.container {
   border: 1px solid black;
@@ -137,6 +137,11 @@ h1 {
 
 h1:hover {
  text-shadow  :  0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+ -webkit-transition: all 500ms ease;
+ -moz-transition: all 500ms ease;
+ -ms-transition: all 500ms ease;
+ -o-transition: all 500ms ease;
+ transition: all 500ms ease;
 }
 
 h2 {
@@ -321,17 +326,21 @@ text-align: center;
 
 /* home-footer */
 
-
-
-.col-md-4 {
-  width: 33.3%;
-  margin-right: -15px;
-  margin-left: 15px;
+#footer {
+ padding-top: 15px;
+ background: black;
 }
 
-.col-md-4 {
-  color: #777777;
+
+
+/* social-icon buttons */
+a.btn.btn-social-icon.btn-twitter {
+  color: #777;
+  text-decoration: none;
+  border: 1px solid #777;
 }
+
+
 
   /* Sign Up Form */
 

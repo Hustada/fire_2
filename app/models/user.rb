@@ -13,6 +13,10 @@ class User < ActiveRecord::Base
     name = first_name + ' ' + last_name
   end
 
+  def firstname
+    firstname = first_name
+  end
+
   
 
 

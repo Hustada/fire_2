@@ -17,7 +17,7 @@
          <%= link_to "Join Existing Pit", pits_path, class: "btn btn-default" %>
          <% elsif user_signed_in? %>
          <!-- If user is logged in then show these 2 buttons and welcome message -->
-         <p>Welcome Back! <%=link_to current_user.name, current_user %></p>
+         <p>Welcome Back! <%=link_to current_user.firstname, current_user %></p>
          <%= link_to "Start New Pit", new_pit_path, class: "btn btn-default" %>
          <%= link_to "Join Existing Pit", pits_path, class: "btn btn-default" %>
          
