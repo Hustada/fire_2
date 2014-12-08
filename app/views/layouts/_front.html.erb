@@ -5,33 +5,33 @@
 <body class = "home">
     
 
-     <div class = "container">
-       <div class = "jumbotron" id = "front-jumbotron">
-
-         <center><h1 id = "front-title">Digital Ashes</h1>
+     
+    <div class = "jumbotron" id = "front-jumbotron">
+        <div class = "container">
+          <h1 id = "front-title">Digital Ashes</h1>
   
 
          <% if current_user && !current_user.sign_in_count.blank? && current_user.sign_in_count == 1 && session[:tour].blank? %>         
-         <p>Welcome to the Fire <%=link_to current_user.name, current_user %>!</p>
+           <p>Welcome to the Fire <%=link_to current_user.name, current_user %>!</p>
          <%= link_to "Start New Pit", new_pit_path, class: "btn btn-default front" %>
          <%= link_to "Join Existing Pit", pits_path, class: "btn btn-default front" %>
          <% elsif user_signed_in? %>
          <!-- If user is logged in then show these 2 buttons and welcome message -->
-         <p>Welcome Back <%=link_to current_user.firstname, current_user %>!</p>
+           <p>Welcome Back <%=link_to current_user.firstname, current_user %>!</p>
          <%= link_to "Start New Pit", new_pit_path, class: "btn btn-default front" %>
          <%= link_to "Join Existing Pit", pits_path, class: "btn btn-default front" %>
          
              
          <% else %>
          <%= link_to "Join the Pit!", new_user_registration_path, class: "btn btn-default front" %>
-         <br>
-         <br>
+           <br>
+           <br>
          <%= link_to "Login", user_session_path %>
          </center>
          <% end %>
 
-        </div> 
-       </div>
+      </div> 
+    </div>
 <% unless user_signed_in? %>
      <div class = "container">
 
