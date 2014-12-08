@@ -127,6 +127,11 @@ h1 {
   font-family: 'Cabin', Georgia, Times, serif;
   font-size: 70px;
   line-height: 100px;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
   }
 
   h1#front-title {
@@ -211,6 +216,13 @@ p a {
 
 .info-title a {
   font-family: 'Fredericka the Great', sans-serif;
+
+}
+
+a.btn.btn-default.front {
+  color: #E56F3C;
+  background-color: rgba(0,0,0,.1);
+  border: 1px solid #777
 }
 
 
@@ -487,6 +499,18 @@ p.dislike-pit {
 }
 
 /* User Profile Page */
+
+.profileImage {
+    width:60px;
+    margin-right:5px;
+    height:100%;
+
+    
+}
+.profileImage img {
+    width:100%;
+    border-radius:50%;
+}
 
 .container.profile {
   margin-top: 100px;

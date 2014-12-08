@@ -2,8 +2,9 @@
     <div class = "row-fluid">
         <div class = "col-md-12">
             <div id = "well-profile">
-               <h3><%= @user.first_name %> <%= @user.last_name %></h3>
-                   <h6><%= image_tag avatar_url(@user) %></h6>
+              <div class = "profileImage"><%= image_tag avatar_url(@user) %><h3><%= @user.first_name %> <%= @user.last_name %></h3></div>
+               
+                   
                   
                    <h4>About Me</h4>
                    <p><%= @user.about %></p>
