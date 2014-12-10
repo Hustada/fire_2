@@ -80,8 +80,11 @@
       <br>
 
   
-  <div class = "col-md-2">
-    
+  <div class = "col-md-2" id = "current-pits">
+    <h4><%= @pit.user.first_name %>'s Current Pits</h4>
+      <ul class = "user-pit-list">
+        <li><%= link_to @pit.topic, pit_path(@pit) %></li>
+      </ul>
   </div>
 
 <div class = "row">
