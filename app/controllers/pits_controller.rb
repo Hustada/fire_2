@@ -34,8 +34,9 @@ end
 
 
 def show
-  @pit = Pit.find(params[:id])
+@pit = Pit.find(params[:id])
 end
+
 
 
 def edit
@@ -50,6 +51,10 @@ def update
       render :edit
      end
 end
+
+
+
+
 
 
 
