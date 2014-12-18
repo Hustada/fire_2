@@ -34,8 +34,9 @@ end
 
 
 def show
-@pit = Pit.find(params[:id])
+ @pit = Pit.find(params[:id])
 end
+
 
 
 
@@ -51,18 +52,6 @@ def update
       render :edit
      end
 end
-
-
-
-
-
-
-
-
-
-
-
-
 
 def destroy
   @pit = Pit.find(params[:id])
@@ -95,7 +84,7 @@ def correct_user
   end
 
 def pit_params
-    params.require(:pit).permit(:topic, :summary, :image, :video_url, :author, :user_id, :tag_list)
+    params.require(:pit).permit(:topic, :summary, :image, :video_url, :author, :user_id, :tag_list, :joinable_id)
 end
 
 end

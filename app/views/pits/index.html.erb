@@ -4,7 +4,7 @@
   <br>  
 
   <div id = "pit_index">
-   <% @pit.order('created_at DESC').each do |pit| %>
+   <% @pits.order('created_at DESC').each do |pit| %>
     <div class = "well"> 
        <h3 id="pit-title"><%= link_to pit.topic, pit_path(pit) %></h3>
        <p>by: <%= link_to pit.author, '#' %></p>
@@ -14,7 +14,8 @@
             <p>Tags: <%= raw pit.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
           <br>
 
-            <p>Pit Created by: <%= link_to pit.user.name, pit.user %> on <%= pit.created_at.strftime("%d %b. %Y") %></p>
+            <p>Pit Created by: <%= link_to  pit.user.name, pit.user %> on <%= pit.created_at.strftime("%d %b. %Y") %></p>
+
 
             <%= link_to "View Pit", pit_path(pit), class: "btn btn-default" %>
                       

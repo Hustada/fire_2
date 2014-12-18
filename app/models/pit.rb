@@ -3,6 +3,7 @@ class Pit < ActiveRecord::Base
   acts_as_taggable
   acts_as_votable
   has_many :comments
+  # has_many :joinables
   belongs_to :user
   mount_uploader :image, ImageUploader
 
