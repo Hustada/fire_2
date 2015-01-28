@@ -11,6 +11,7 @@ def index
   @pit = Pit.tagged_with(params[:tag])
   @user = User.find_by(params[:id])
   @pits = Pit.paginate(page: params[:page])
+
 else
   @pit = Pit.all
   @user = User.find_by(params[:id])
@@ -35,6 +36,8 @@ end
 
 def show
  @pit = Pit.find(params[:id])
+ @user = User.find_by(params[:id])
+ @joinables = Joinable.all
 end
 
 

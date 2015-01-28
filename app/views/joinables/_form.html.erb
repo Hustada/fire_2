@@ -1,0 +1,13 @@
+<%= form_for Joinable.new do |f| %>
+
+
+<div class="field">
+<%= f.label :pit_id, Pit.all.collect { |pit| [ pit.topic, pit.id ] } %>
+</div>
+<div class="field">
+<%= f.label :current_user_id, User.all.collect { |user| [ current_user.name, current_user.id ] } %>
+</div>
+<div class="actions">
+<%= f.submit %>
+</div>
+<% end %>
