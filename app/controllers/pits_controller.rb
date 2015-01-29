@@ -37,7 +37,7 @@ end
 def show
  @pit = Pit.find(params[:id])
  @user = User.find_by(params[:id])
- @joinables = Joinable.all
+ @pits = @user.pits
 end
 
 

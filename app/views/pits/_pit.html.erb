@@ -1,14 +1,14 @@
 <div id = "pit_index">
  
     <div class = "well"> 
-       <h3 id="pit-title"><%= link_to pit.topic, pit_path(pit) %></h3>
-       <p>by <%= link_to pit.author, '#' %></p>
+       <h3 id="pit-title"><%= link_to pit.users.topic, pit_path(pit) %></h3>
+       <p>by <%= link_to pit.users.author, '#' %></p>
           <br>
             <p><%= pit.summary %></p>
             <p>Replies (<%= pit.comments.count %>)</p>
           <br>
 
-            <p>Pit Created by: <%= link_to pit.user.name, pit.user %> on <%= pit.created_at %></p>
+            <p>Pit Created by: <%= link_to pit.users.name, pit.user %> on <%= pit.created_at %></p>
 
             <%= link_to "View Pit", pit_path(pit), class: "btn btn-default" %>
             <%= link_to "Delete Pit", pit_path(pit), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"  %>

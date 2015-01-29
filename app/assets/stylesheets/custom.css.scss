@@ -429,7 +429,7 @@ h3.pit-title {
 }
 
 .info-block {
-  margin-top: 55px;
+  margin-top: 5px;
 }
 
 .info-block a {
@@ -490,6 +490,14 @@ p.dislike-pit {
 }
 
 /* Pit List Page */
+.paginate a {
+  color: black;
+}
+.paginate {
+  height: 50px;
+  color: black;
+  background-color: red;
+}
 
 .container.list-pits {
   max-width: 1170px;
@@ -498,6 +506,7 @@ p.dislike-pit {
   box-sizing :border-box;
   margin-top: 75px;
   color: #777;
+  padding-bottom: 50px;
 }
 
 .container.list-pits .well {

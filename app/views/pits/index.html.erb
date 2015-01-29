@@ -1,5 +1,5 @@
 <div class = "container list-pits", id = "list_pits"> 
-    <%= link_to "Add New Pit", new_pit_path, id: "new_link", remote: true, class: "btn btn-default" %>
+    <%= link_to "Add New Pit", new_pit_path, id: "new_link", class: "btn btn-default" %>
   <br>
   <br>  
 
@@ -15,19 +15,21 @@
           <br>
                  
 
-            <p>Pit Created by: <%= link_to pit.user %> on <%= pit.created_at.strftime("%d %b. %Y") %></p>
+            <p>Pit Created by: <%= link_to pit.users.first.name %> on <%= pit.created_at.strftime("%d %b. %Y") %></p>
 
 
-<% end %>  
+
 
             <%= link_to "View Pit", pit_path(pit), class: "btn btn-default" %>
                       
-            <% if pit.user == current_user %>
+            <% if pit.users == current_user %>
             <%= link_to "Delete Pit", pit_path(pit), method: :delete, data: { confirm: 'Are you sure?' }, remote: true,  class: "btn btn-default"  %>
             <% end %>
-           
-    </div>
-            
   </div>
-           <%= will_paginate @pits, renderer: BootstrapPagination::Rails %>
+            <% end %>
+            <div class = "paginate">
+           <%= will_paginate @joinables, renderer: BootstrapPagination::Rails %>
+
+           </div>   
 </div>
+          
