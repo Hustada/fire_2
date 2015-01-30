@@ -3,31 +3,29 @@
         <div class = "col-md-12">
             <div id = "well-profile">
               <div class = "profileImage"><%= image_tag avatar_url(@user) %><h3><%= @user.first_name %> <%= @user.last_name %></h3></div>
-               
                    
-                  
                    <h4>About Me</h4>
-                   <p><%= @user.about %></p>
-                  
+                     <p><%= @user.about %></p>
                    <h6>Email: <%= @user.email %></h6>
-                   <h6>Location: <%= @user.city %>, <%= @user.state %></h6>
-                   <h6>Pits Started (<%= @user.pits.count %>)</h6>
-                   <br>
+                     <h6>Location: <%= @user.city %>, <%= @user.state %></h6>
+                       <h6>Pits Started (<%= @user.pits.count %>)</h6>
+                         <br>
 
                    <ul class = "user-pit-list">
                      <h4><%= @user.first_name %>'s Current Pits</h4>
                        <% @pits.each do |pit| %>
-                       <li><%= link_to pit.topic, pit_path(pit) %></li>
-                     <% end %>
+                         <li><%= link_to pit.topic, pit_path(pit) %></li>
+                       <% end %>
                    </ul>
-                  <div id = "sexy_line"></div>
-                  <a><%= link_to "Start a new pit", new_pit_path %></a>
-                   <br>
-                  <a><%= link_to "Join a created pit", pits_path %></a>
-                  <br>
-                  <a><%= link_to "Edit profile", edit_user_registration_path %></a>
-            </div>
-        </div>
-    </div>
-</div>
+                  
+                  
+                    <a><%= link_to "Start a new pit", new_pit_path %></a>
+                      <br>
+                    <a><%= link_to "Join a created pit", pits_path %></a>
+                      <br>
+                    <a><%= link_to "Edit profile", edit_user_registration_path %></a>
+                 
+              </div>
+          </div>
+      </div>
     
