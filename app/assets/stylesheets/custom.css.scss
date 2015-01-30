@@ -495,8 +495,15 @@ p.dislike-pit {
 }
 .paginate {
   height: 50px;
-  color: black;
-  background-color: red;
+  color: #E56F3C;
+}
+
+.pagination a {
+  color: #E56F3C;
+}
+
+a.next_page {
+  color: #E56F3C;
 }
 
 .container.list-pits {

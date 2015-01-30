@@ -4,32 +4,26 @@
   <br>  
 
   <div id = "pit_index">
-   <% @pits.order('created_at DESC').each do |pit| %>
-    <div class = "well"> 
-       <h3 id="pit-title"><%= link_to pit.topic, pit_path(pit) %></h3>
-       <p>by: <%= link_to pit.author, '#' %></p>
-          <br>
-            <p><%= truncate(pit.summary, :length => 100) %></p>
-            <p>Replies (<%=link_to "#{pit.comments.count}", pit_path(pit) %>)</p>
-            <p>Tags: <%= raw pit.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
-          <br>
-                 
-
-            <p>Pit Created by: <%= link_to pit.users.first.name %> on <%= pit.created_at.strftime("%d %b. %Y") %></p>
-
-
-
-
-            <%= link_to "View Pit", pit_path(pit), class: "btn btn-default" %>
-                      
-            <% if pit.users == current_user %>
-            <%= link_to "Delete Pit", pit_path(pit), method: :delete, data: { confirm: 'Are you sure?' }, remote: true,  class: "btn btn-default"  %>
+    <% @pits.order('created_at DESC').each do |pit| %>
+  <div class = "well"> 
+    <h3 id="pit-title"><%= link_to pit.topic, pit_path(pit) %></h3>
+      <p>by: <%= link_to pit.author, '#' %></p>
+        <br>
+          <p><%= truncate(pit.summary, :length => 100) %></p>
+          <p>Replies (<%=link_to "#{pit.comments.count}", pit_path(pit) %>)</p>
+          <p>Tags: <%= raw pit.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
+        <br>
+          <p>Pit Created by: <%= link_to pit.users.first.name %> on <%= pit.created_at.strftime("%d %b. %Y") %></p>
+        
+        <%= link_to "View Pit", pit_path(pit), class: "btn btn-default" %>
+          <% if pit.users == current_user %>
+            <%= link_to "Delete Pit", pit_path(pit), method: :delete, data: { confirm: 'Are you sure?' }, remote: true, class: "btn btn-default"  %>
             <% end %>
   </div>
-            <% end %>
-            <div class = "paginate">
-           <%= will_paginate @joinables, renderer: BootstrapPagination::Rails %>
-
-           </div>   
+    <% end %>
+  <center>
+    <div class = "paginate">
+      <%= will_paginate @pits %>
+  </div></center>   
 </div>
           
