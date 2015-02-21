@@ -9,12 +9,12 @@ end
 def index
   if params[:tag]
   @pit = Pit.tagged_with(params[:tag])
-  @user = User.where(user_id: current_user.id)
+  @user = User.find_by(params[:user_id])
   @pits = Pit.paginate(:page => params[:page], :per_page => 5)
 
 else
   @pit = Pit.all
-  @user = User.where(user_id: current_user.id)
+  @user = User.find_by(params[:user_id])
   @pits = Pit.paginate(:page => params[:page], :per_page => 5)
 end
 end
@@ -36,9 +36,11 @@ end
 
 def show
  @pit = Pit.find(params[:id])
- @user = User.find_by(params[:user_d])
+ @user = User.find_by(params[:user_id])
  @pits = @user.pits
 end
+
+
 
 
 
