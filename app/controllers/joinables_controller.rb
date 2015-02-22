@@ -13,6 +13,8 @@ class JoinablesController < ApplicationController
    @joinable = current_user.joinables.create(joinable_params)
   end
 end
+
+
 def create
     @pit = current_user.pits.create(pit_params)
     @pits = Pit.order('created_at ASC')
