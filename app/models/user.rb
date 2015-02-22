@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   acts_as_voter
-  has_many :joinables
+  has_many :joinables, :dependent => :destroy
   has_many :pits, :through => :joinables
   has_many :comments
   enum role: [:user, :vip, :admin]

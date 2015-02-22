@@ -13,10 +13,10 @@
           <p>Replies (<%=link_to "#{pit.comments.count}", pit_path(pit) %>)</p>
           <p>Tags: <%= raw pit.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
         <br>
-          <p>Pit Created by: <%= link_to pit.users.first.name %> on <%= pit.created_at.strftime("%d %b. %Y") %></p>
+          <p>Pit Created by: <%= link_to pit.users.first.name, current_user %> on <%= pit.created_at.strftime("%d %b. %Y") %></p>
         
         <%= link_to "View Pit", pit_path(pit), class: "btn btn-default" %>
-          <% if pit.users == current_user %>
+          <% if pit.users.first == current_user %>
             <%= link_to "Delete Pit", pit_path(pit), method: :delete, data: { confirm: 'Are you sure?' }, remote: true, class: "btn btn-default"  %>
             <% end %>
   </div>
