@@ -6,24 +6,14 @@ class JoinablesController < ApplicationController
 
   def show
     @joinable = Joinable.find(params[:id])
-  end
-
-
-  def create
-   @joinable = current_user.joinables.create(joinable_params)
-  end
-end
-
-
-def create
-    @pit = current_user.pits.create(pit_params)
-    @pits = Pit.order('created_at ASC')
-      respond_to do |format|
-        format.html { redirect_to @pit}
-        format.js  {}
+    @pit_members = @joinable.users
+    @user = User.find(param[:id]) if signed_in?
 
   end
-end
+
+
+  
+
 
 private
  

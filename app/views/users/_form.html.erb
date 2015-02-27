@@ -1,0 +1,4 @@
+<%= form_for(@user) do |f| %>
+  <%= f.hidden_field :pit_id, :value => @pit.id %>
+  <%= f.submit "Join Pit", class: "btn btn-default" %>
+<% end %>

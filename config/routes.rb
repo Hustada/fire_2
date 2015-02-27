@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   end
 
   resources :joinables
+
   
     get 'tags/:tag', to: 'pits#index', as: :tag
     get '/about' => 'pages#about'

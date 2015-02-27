@@ -39,8 +39,10 @@
             <% @pits.each do |pit| %>
               <li><%= link_to pit.topic, pit_path(pit) %></li>
             <% end %>
-            
           </ul>
+          <div>
+           <%= render 'users/form' %>
+          </div>
       </div>
 
     <% if @pit.video_url? %>
