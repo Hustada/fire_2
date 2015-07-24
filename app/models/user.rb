@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   has_many :comments
   enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?
+  devise :confirmable
 
   def set_default_role
     self.role ||= :user
