@@ -80,6 +80,10 @@ def downvote
   redirect_to pit_path(@pit)
 end
 
+ def tag_cloud
+    @tags = Pit.tag_counts_on(:tags)
+  end
+
 
 private
 

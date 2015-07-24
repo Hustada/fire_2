@@ -1,4 +1,6 @@
 module PitsHelper
+include ActsAsTaggableOn::TagsHelper
+
 
   def convincing_pit
     @pit = Pit.find(params[:id])

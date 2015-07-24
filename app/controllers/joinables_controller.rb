@@ -29,5 +29,5 @@ private
  
 
 def joinable_params
-  params.require(:joinable).permit(:pit_id, :user_id)
+  params.require(:joinable).permit(:pit_id, :user_id, :tag_list)
 end
