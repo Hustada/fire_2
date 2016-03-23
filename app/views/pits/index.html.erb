@@ -6,7 +6,7 @@
   <div id = "pit_index">
     <% @pits.order('created_at DESC').each do |pit| %>
   <div class = "well"> 
-    <h3 id="pit-title"><%= link_to pit.topic, pit_path(pit) %></h3>
+    <h3 id="pit-title"><%=link_to pit.topic, pit_path(pit) %></h3>
       <p>by: <%= link_to pit.author, '#' %></p>
         <br>
           <p><%= truncate(pit.summary, :length => 100) %></p>
