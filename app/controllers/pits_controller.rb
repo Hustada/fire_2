@@ -12,9 +12,6 @@ def index
   @pits = Pit.paginate(:page => params[:page], :per_page => 5)
 end
 
-
-
-
 def create
     @pit = current_user.pits.create(pit_params)
     @pits = Pit.order('created_at ASC')
@@ -25,30 +22,23 @@ def create
   end
 end
     
-
-
 def show
  @pit = Pit.find(params[:id])
  @user = User.find_by(params[:user_id])
  @pits = @user.pits
 end
 
-
-
-
-
-
 def edit
   @pit = Pit.find(params[:id])
 end
 
 def update
-     @pit = Pit.find(params[:id])
-     if @pit.update(pit_params)
-       redirect_to @pit
-     else
-      render :edit
-     end
+   @pit = Pit.find(params[:id])
+   if @pit.update(pit_params)
+     redirect_to @pit
+   else
+    render :edit
+   end
 end
 
 def destroy
@@ -73,17 +63,21 @@ def downvote
   redirect_to pit_path(@pit)
 end
 
- def tag_cloud
-    @tags = Pit.tag_counts_on(:tags)
-  end
+def tag_cloud
+  @tags = Pit.tag_counts_on(:tags)
+end
 
+
+def positive_response
+  
+end
 
 private
 
 def correct_user
-    @pit = current_user.pits.find_by_id(params[:id])
-    redirect_to root_path if @pit.nil?
-  end
+  @pit = current_user.pits.find_by_id(params[:id])
+  redirect_to root_path if @pit.nil?
+end
 
 def pit_params
     params.require(:pit).permit(:topic, :summary, :image, :video_url, :author, :user_id, :tag_list, :joinable_id)
