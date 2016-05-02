@@ -2,6 +2,7 @@ class Comment < ActiveRecord::Base
   acts_as_votable
   belongs_to :pit
   belongs_to :user
+  validates :body, presence: true
 
   auto_html_for :body do
     html_escape

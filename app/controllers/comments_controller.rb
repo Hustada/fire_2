@@ -16,6 +16,9 @@ end
       format.html { redirect_to pit_path(@pit)}
       format.js  {}
       end
+    else
+      flash[:notice] = "Comment can't be fucking blank"
+      redirect_to pit_path(@pit)
     end
   end
   

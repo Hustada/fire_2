@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource_or_scope)
-    root_path
+    pits_path
   end
 
   def youtube_video(url)
