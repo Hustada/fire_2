@@ -28,7 +28,7 @@
               <li><%= link_to "Profile", current_user %></li>
               <li><%= link_to "Pits", pits_path %></li>
               <li><%= link_to "Logout", destroy_user_session_path,:method => :delete %></li>
-              <li><a class id = "name-log">(<%= current_user.name %>)</a></li>
+              <li><%=link_to "#{current_user.name}", current_user, id: "name-log" %></li>
               <% else %>
               <li><%= link_to "Sign in", user_session_path %></li>
               <% end %>
