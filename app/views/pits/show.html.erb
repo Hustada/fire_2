@@ -5,17 +5,17 @@
         <h4 class = "pit-info">Heat Index</h4>
           <ul class = "list-group pit-info-list">
 
-            <li>Pit started by: <%= @pit.users.first.name %></li>
+            <li>Pit started by: <%= @pit.user.name %></li>
             <li>Pit Views</li>
             <li>Pit Ranking</li>
             <li>Positive responses ( <%= @convincing_response %> )</li>
             
-            <li>Pits Burned: <%= @pit.users.count %> </li>
+            <li>Pits Burned: <%= @pit.user.pits.count %> </li>
             <li>Positive votes for (<%= @pit.get_likes.size.to_i %>)</li>
             <li>Negative votes for (<%= @pit.get_dislikes.size.to_i %>)</li>
           </ul>
     
-          <% if @pit.users.first == current_user %>
+          <% if @pit.user == current_user %>
       <%= link_to '|Delete Pit|',        pit_path(@pit),
                     method: :delete, data: { confirm: 'Are you sure?'} %>
       <%= link_to '|Edit|', edit_pit_path(@pit) %>  
@@ -34,7 +34,7 @@
         </div>
 
           
-        <h4><%= @pit.users.first.name %>'s Current Pits</h4>
+        <h4><%= @pit.user.name %>'s Current Pits</h4>
           <ul class = "user-pit-list", id = "current-pits">
             <% @pits.each do |pit| %>
               <li><%= link_to pit.topic, pit_path(pit) %></li>

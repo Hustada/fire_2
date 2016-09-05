@@ -2,9 +2,8 @@ class Pit < ActiveRecord::Base
   validates :topic, :author, :summary, presence: true
   acts_as_taggable
   acts_as_votable
+  belongs_to :user
   has_many :comments
-  has_many :joinables, :dependent => :destroy
-  has_many :users, :through => :joinables
   mount_uploader :image, ImageUploader
 
   auto_html_for :summary do

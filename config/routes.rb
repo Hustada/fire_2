@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
+
+  get '/about' => 'pages#about'
   
   devise_for :users, :controllers => { registrations: 'registrations' }
   devise_scope :user do
@@ -11,15 +13,12 @@ Rails.application.routes.draw do
   resources :pits do
     put "like", to: "pits#upvote"
       put "dislike", to: "pits#downvote"
+      get 'tags/:tag', to: 'pits#index'
     resources :comments do
       put "edit", to: "comments#edit"
       put "like", to: "comments#upvote"
       put "dislike", to: "comments#downvote"
     end
   end
-
-  resources :joinables
-  
     get 'tags/:tag', to: 'pits#index', as: :tag
-    get '/about' => 'pages#about'
 end
