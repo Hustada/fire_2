@@ -7,15 +7,15 @@ def new
 end
 
 def index
-  if params[:tag]
-  @pit = Pit.tagged_with(params[:tag])
-  @user = User.find_by(params[:user_id])
-  @pits = Pit.paginate(page: params[:page])
-else
-  @pit = Pit.all
-  @user = User.find_by(params[:user_id])
-  @pits = Pit.paginate(:page => params[:page], :per_page => 5)
-end
+   if params[:tag]
+    @pit = Pit.tagged_with(params[:tag])
+    @user = User.find_by(params[:id])
+    @pits = Pit.paginate(page: params[:page])
+  else
+    @pit = Pit.all
+    @user = User.find_by(params[:id])
+    @pits = Pit.paginate(page: params[:page])
+  end
 end
 
 def create
@@ -24,7 +24,6 @@ def create
       respond_to do |format|
         format.html { redirect_to @pit}
         format.js  {}
-
   end
 end
     
